@@ -68,11 +68,23 @@ AFRAME.registerSystem('game', {
     this.player.el.components.sound.playSound()
     this.removeAllBalls()
     // TODO: spawn a new ball!
+    this.spawnBall()
+    return true
   },
 
   newBallShouldSpawn: function() {
     // TODO: implement me!
     // hint: Is there some way to use Date.now() to compare the current time and the time since the last ball spawned?
+    while (game is going)
+      every 5 seconds spit out a new ball
+    if (restart())
+      while count <10 {
+        setTimeout(() => {
+          this.spawnBall()
+        }, 5000)
+        count ++
+      }
+      
     return false
   },
 
